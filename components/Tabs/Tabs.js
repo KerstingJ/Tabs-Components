@@ -2,7 +2,7 @@
 class Tab {
   constructor(element){
     this.element = element;
-    this.tabsLinks = element.querySelectorAll(".tabs-link")
+    this.tabsLinks = element.querySelectorAll(".tabs-link");
     this.tabsLinks.forEach(link => new TabLink(link));
     this.tabsLinks.forEach(link => link.addEventListener("click", this.select.bind(this, link)));
     this.selectedTab = new TabLink(element.querySelector(".tabs-link-selected"));
@@ -10,7 +10,7 @@ class Tab {
 
   select(link) {
     this.selectedTab.deselect();
-    link = new TabLink(link);
+    link = new TabLink(link); // why do I have to do this?
     link.select();
     this.selectedTab = link;
   }

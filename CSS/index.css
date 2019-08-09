@@ -90,6 +90,19 @@
 .tabs .tabs-link-selected:hover {
   background-color: #ffffff;
 }
+.carousel .fakeImage {
+  display: none;
+  overflow: hidden;
+  transition: 2s;
+}
+.carousel .active-image {
+  display: block;
+  margin: 20px;
+  font-size: 1rem;
+}
+.carousel .active-image .box-title {
+  font-size: 2rem;
+}
 body {
   box-sizing: border-box;
   min-width: 300px;
